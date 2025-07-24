@@ -2,7 +2,6 @@
 #include <string>
 #include <iomanip>
 #include <vector>
-#include <sstream>
 
 class EbookManager {
 public:
@@ -24,7 +23,7 @@ public:
         }
 
         const int user_count = GetActiveUserCount();
-        double user_less_pages = user_count - pages_readings_[users_progress_[user_id]] - 1;
+        double user_less_pages = user_count - pages_readings_[users_progress_[user_id]];
         
         return user_count == 1 ? 1 :
                                  user_less_pages / (user_count - 1.0);
